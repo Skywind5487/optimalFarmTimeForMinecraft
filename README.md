@@ -61,8 +61,14 @@ wiki/
 ## 🚀 開始使用 / Getting Started
 
 1. 安裝依賴 / Install dependencies:
+use pip
 ```bash
 pip install -r requirements.txt
+```
+or use uv
+```bash
+uv venv
+uv sync
 ```
 
 2. 運行分析 / Run analysis:
@@ -81,15 +87,15 @@ This project uses the following statistical models:
 
 ## 🔜 未來計劃 / Future Plans
 
-- 補充更多農場範例 / Add more farm examples
-- 研究飛行器來回對產率的影響 / Study the impact of return flight paths on rates
-- 分析更多可耕種物品 / Analyze more farmable items:
-  - 作物 / Crops
-  - 蘑菇 / Mushrooms
-  - 仙人掌、海帶、竹子等 / Cacti, kelp, bamboo, etc.
-  - 草方塊 / Grass blocks
-  - 海龜蛋 / Turtle eggs
-  - 鐘乳石 / Pointed dripstone
+- 補充更多農場範例 / Add more farm designs
+- 研究飛行器返回路徑對產率的影響 / Analyze how return flight paths affect efficiency
+- 擴展耕種物品分析 / Expand analysis of farmable items:
+- 傳統作物（小麥、馬鈴薯等）/ Crops (wheat, potatoes, etc.)
+- 菇類植物 / Mushrooms
+- 特殊植物：仙人掌、海帶、竹子、紫頌花、紅樹胎生苗、甜莓叢
+    - Special blocks: Cactus, kelp, bamboo, chorus flowers, mangrove propagules, sweet berries
+- 特殊自然方塊：草方塊、海龜蛋、鐘乳石
+    -  Natural blocks: grass blocks, turtle eggs, dripstone
 
 ## 💡 貢獻 / Contributing
 

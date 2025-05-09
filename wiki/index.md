@@ -48,3 +48,7 @@ All analyses are implemented in Python, with source code located in the `src/` d
 - `rate_class.py`: 通用產率計算器 / Generic rate calculator
 - `amethyst.py`: 紫水晶分析 / Amethyst analysis
 - `sugar_cane.py`: 甘蔗分析 / Sugar cane analysis
+
+## README
+
+[Readme](../README.md)
