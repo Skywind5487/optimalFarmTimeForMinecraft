@@ -109,3 +109,11 @@ Suggestions for improvements or pull requests are welcome.
 
 本專案採用 MIT 授權條款 - 詳見 LICENSE 文件。
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgement
+
+Imango [1.17 Shard Farming: Doing The Crystal Math - YouTube](https://youtu.be/H3bCCANEbbQ?t=502)
+Which inspired me to do this, as we obtained very similar results in the end.
+
+My friend @Youhe inspired me to start this project and try modeling it with a binomial distribution.
+
