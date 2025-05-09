@@ -8,12 +8,12 @@ This project analyzes the growth and harvesting mechanics of different resources
 
 ### 紫水晶 Amethyst
 
-- 最佳採收時間 / Optimal harvesting time: 2h 46m 36s 16t (199,937 ticks)
+- 最佳採收時間 / Optimal harvesting time: 2h 46m 36s 16tick (199,937 ticks)
 - 每小時產量 / Hourly yield: 0.517 shards/hour
 
 ### 甘蔗 Sugar Cane
 
-- 最佳採收時間 / Optimal harvesting time: 41m 2s 13t (49,253 ticks)
+- 最佳採收時間 / Optimal harvesting time: 41m 2s 13tick (49,253 ticks)
 - 每小時產量 / Hourly yield: 2.6 sugar canes/hour
 
 ## 📚 詳細文檔 / Detailed Documentation
@@ -35,7 +35,6 @@ For complete analysis and explanation, please refer to the wiki documents:
 1. 生長時間較長 / Long growth time
 2. 無法使用骨粉加速 / Cannot be sped up with bone meal
 3. 需要精確的計時收割 / Require precise timing for harvesting
-
 
 ## 🛠️ 技術實現 / Technical Implementation
 
@@ -62,16 +61,20 @@ wiki/
 
 1. 安裝依賴 / Install dependencies:
 use pip
+
 ```bash
 pip install -r requirements.txt
 ```
+
 or use uv
+
 ```bash
 uv venv
 uv sync
 ```
 
 2. 運行分析 / Run analysis:
+
 ```bash
 python src/amethyst.py    # 分析紫水晶 / Analyze amethyst
 python src/sugar_cane.py  # 分析甘蔗 / Analyze sugar cane
@@ -93,9 +96,9 @@ This project uses the following statistical models:
 - 傳統作物（小麥、馬鈴薯等）/ Crops (wheat, potatoes, etc.)
 - 菇類植物 / Mushrooms
 - 特殊植物：仙人掌、海帶、竹子、紫頌花、紅樹胎生苗、甜莓叢
-    - Special blocks: Cactus, kelp, bamboo, chorus flowers, mangrove propagules, sweet berries
+  - Special blocks: Cactus, kelp, bamboo, chorus flowers, mangrove propagules, sweet berries
 - 特殊自然方塊：草方塊、海龜蛋、鐘乳石
-    -  Natural blocks: grass blocks, turtle eggs, dripstone
+  -  Natural blocks: grass blocks, turtle eggs, dripstone
 
 ## 💡 貢獻 / Contributing
 
