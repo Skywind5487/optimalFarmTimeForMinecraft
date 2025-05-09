@@ -93,12 +93,12 @@ This project uses the following statistical models:
 - 補充更多農場範例 / Add more farm designs
 - 研究飛行器返回路徑對產率的影響 / Analyze how return flight paths affect efficiency
 - 擴展耕種物品分析 / Expand analysis of farmable items:
-- 傳統作物（小麥、馬鈴薯等）/ Crops (wheat, potatoes, etc.)
-- 菇類植物 / Mushrooms
-- 特殊植物：仙人掌、海帶、竹子、紫頌花、紅樹胎生苗、甜莓叢
-  - Special blocks: Cactus, kelp, bamboo, chorus flowers, mangrove propagules, sweet berries
-- 特殊自然方塊：草方塊、海龜蛋、鐘乳石
-  -  Natural blocks: grass blocks, turtle eggs, dripstone
+    - 傳統作物（小麥、馬鈴薯等）/ Crops (wheat, potatoes, etc.)
+    - 菇類植物 / Mushrooms
+    - 特殊植物：仙人掌、海帶、竹子、紫頌花、紅樹胎生苗、甜莓叢
+        - Special blocks: Cactus, kelp, bamboo, chorus flowers, mangrove propagules, sweet berries
+    - 特殊自然方塊：草方塊、海龜蛋、鐘乳石
+        -  Natural blocks: grass blocks, turtle eggs, dripstone
 
 ## 💡 貢獻 / Contributing
 
