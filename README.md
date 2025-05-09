@@ -91,7 +91,7 @@ This project uses the following statistical models:
 ## 🔜 未來計劃 / Future Plans
 
 - 補充更多農場範例 / Add more farm designs
-- 研究甘蔗的初始值問題(見[doc](wiki/zh-tw/sugar_cane.md)) / Investigate the initial state problem of sugar cane growth(see [doc](wiki/en/sugar_cane.md))
+- 研究甘蔗的初始值問題(見[doc](wiki/zh_tw/sugar_cane.md#問題)) / Investigate the initial state problem of sugar cane growth(see [doc](wiki/en/sugar_cane.md#problems))
 - 研究飛行器返回路徑對產率的影響 / Analyze how return flight paths affect efficiency
 - 擴展耕種物品分析 / Expand analysis of farmable items:
     - 傳統作物（小麥、馬鈴薯等）/ Crops (wheat, potatoes, etc.)
