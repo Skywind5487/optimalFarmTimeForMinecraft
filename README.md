@@ -4,6 +4,8 @@
 
 This project analyzes the growth and harvesting mechanics of different resources in Minecraft to calculate optimal harvesting times. It primarily uses binomial and Poisson distributions for modeling and analysis.
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Skywind5487/optimalFarmTimeForMinecraft)
+
 ## 📊 目前分析結果 / Current Analysis Results
 
 ### 紫水晶 Amethyst
