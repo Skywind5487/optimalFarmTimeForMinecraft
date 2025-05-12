@@ -2,8 +2,8 @@ from rate_calculator import rate_calculator
 import numpy as np
 from scipy.stats import binom, poisson
 
-def amethyst_yield_binom(x: int, p: float) -> float:
-    """Binomial distribution model for calculating amethyst shard yield rate
+def amethyst_rate_binom(x: int, p: float) -> float:
+    """Binomial distribution model for calculating amethyst shard rate rate
     
     The model assumes:
     - Small buds grow to medium buds with probability p per tick
@@ -16,14 +16,14 @@ def amethyst_yield_binom(x: int, p: float) -> float:
         p (float): Probability of successful growth tick (1/40960 for amethyst)
     
     Returns:
-        float: Expected yield rate in shards per tick
+        float: Expected rate rate in shards per tick
     """
     P_leq_3 = binom.cdf(3, int(x), p)     # Probability of ≤3 growth events
     expected_fragments = 2 * (1 - P_leq_3) # Expected number of shards
     return expected_fragments / x
 
-def amethyst_yield_poisson(x: int, p: float) -> float:
-    """Poisson distribution model for calculating amethyst shard yield rate
+def amethyst_rate_poisson(x: int, p: float) -> float:
+    """Poisson distribution model for calculating amethyst shard rate rate
     
     Similar to binomial model but uses Poisson approximation:
     - Assumes rare events (growth) over many trials
@@ -34,7 +34,7 @@ def amethyst_yield_poisson(x: int, p: float) -> float:
         p (float): Probability of successful growth tick (1/40960 for amethyst)
     
     Returns:
-        float: Expected yield rate in shards per tick
+        float: Expected rate rate in shards per tick
     """
     lambda_val = x * p                     # Mean number of growth events
     P_leq_3 = poisson.cdf(3, lambda_val)  # Probability of ≤3 events
@@ -43,14 +43,17 @@ def amethyst_yield_poisson(x: int, p: float) -> float:
 
 if __name__ == "__main__":
     # Initialize calculator with amethyst parameters
-    calc = rate_calculator(
-        binomial_func=amethyst_yield_binom,
-        poisson_func=amethyst_yield_poisson,
+    calc: rate_calculator = rate_calculator(
+        binomial_func=amethyst_rate_binom,
+        poisson_func=amethyst_rate_poisson,
         max_ticks=10**6,
         p=1/40960,  # Amethyst bud growth probability
         title="Amethyst Growth Rate Analysis"
     )
-    
+    side = calc.convert_rate(calc.max_bin_rate / 6) 
+    print(f"side: {side}")
     # Display results and plot
+    #calc.save_plot("amethyst_growth_rate.png")
     calc.show()
     calc.plot()
+    

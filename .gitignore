@@ -1,0 +1,61 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*.pyc
+**/__pycache__
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pyc
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IDE
+.idea/
+*.swp
+*.swo
+.project
+.classpath
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Project specific
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.ruff_cache/
+
+# Plot outputs (optional, remove if you want to track these)
+# assets/plot/*.png
