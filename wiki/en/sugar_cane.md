@@ -92,6 +92,10 @@ p = 3 / (16 ** 3)  # Probability of successful growth per tick
 max_ticks = 10**5   # Maximum time range
 ```
 
+## Problems
+We treat x times as one cycle and assume it starts counting from the beginning each time. This works for amethyst but not for sugar cane.
+Because we don't break the bottom block of the sugar cane, which means the previous growth state might be preserved. This makes our calculation incorrect.
+
 ## Conclusions
 
 1. Binomial and Poisson distributions yield identical results
