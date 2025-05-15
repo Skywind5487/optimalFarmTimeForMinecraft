@@ -11,7 +11,9 @@ class rate_calculator:
             poisson_func=None,
             max_ticks=10**6, 
             p=1/40960,
-            title="Growth Rate Analysis"):
+            title="Growth Rate Analysis",
+            rate=10**2,
+            search_range=100):
         """Initialize rate calculator with parameters
         
         Args:
@@ -28,20 +30,21 @@ class rate_calculator:
         self.poisson_func = poisson_func
         
         # Generate x values for plotting
-        self.x_values = np.linspace(1, max_ticks, max_ticks//10**2)
+        self.x_values = np.linspace(1, max_ticks, max_ticks//rate)
         
         # Calculate maximum points
-        self._calculate_maximum_points()
+        self._calculate_maximum_points(search_range=search_range)
 
         # Create the plot
         self.fig = None
     
-    def _calculate_maximum_points(self):
+    def _calculate_maximum_points(self, search_range=100):
         """Calculate maximum points for both distributions"""
         # Calculate rates for binomial distribution
         self.binomial_rates = [self.binomial_func(x, self.p) for x in self.x_values]
         self.max_bin_x, self.max_bin_rate = self._find_max_rate_point(
-            lambda x: self.binomial_func(x, self.p)
+            lambda x: self.binomial_func(x, self.p),
+            search_range=search_range
         )
         self.bin_time_str = self.convert_ticks(self.max_bin_x)
 
@@ -55,26 +58,27 @@ class rate_calculator:
         if self.poisson_func is not None:
             self.poisson_rates = [self.poisson_func(x, self.p) for x in self.x_values]
             self.max_poi_x, self.max_poi_rate = self._find_max_rate_point(
-                lambda x: self.poisson_func(x, self.p)
+                lambda x: self.poisson_func(x, self.p),
+                search_range=search_range
             )
             self.poi_time_str = self.convert_ticks(self.max_poi_x)
 
-    def _find_max_rate_point(self, rate_func):
+    def _find_max_rate_point(self, rate_func, search_range):
         """Find maximum rate point using minimize_scalar"""
         def negative_rate(x):
             return -rate_func(x)
         
         result = minimize_scalar(
             negative_rate, 
-            bounds=(0, self.max_ticks),
+            bounds=(1, self.max_ticks),
             method='bounded'
         )
         
         x_max_approx = result.x
-        search_range = 100
+        search_range = search_range
         x_nearby = np.arange(
-            int(x_max_approx - search_range), 
-            int(x_max_approx + search_range + 1)
+            max(int(x_max_approx - search_range), 1),
+            min(int(x_max_approx + search_range ), self.max_ticks)
         )
         rates_nearby = [rate_func(x) for x in x_nearby]
         max_idx = np.argmax(rates_nearby)
